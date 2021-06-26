@@ -6,7 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest"
+  },
+  "lint-staged": {
+    "*.{js}": "yarn lint"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint --edit \"$1\"",
+      "pre-commit": "lint-staged && jest --passWithNoTests"
+    }
   },
   "dependencies": {
     "next": "11.0.1",
@@ -14,10 +24,17 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@commitlint/cli": "^12.1.4",
+    "@testing-library/react": "^12.0.0",
+    "babel-jest": "^27.0.5",
     "eslint": "7.29.0",
     "eslint-config-next": "11.0.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
+    "husky": "^6.0.0",
+    "jest": "^27.0.5",
+    "lint-staged": "^11.0.0",
     "prettier": "^2.3.2"
   }
 }
