@@ -1,22 +1,13 @@
-name: lhci
-on: [push]
+name: test
+on: [pull_request]
 jobs:
-  lhci:
-    name: Lighthouse
+  jest-annotations-coverage:
     runs-on: ubuntu-latest
-    env:
-      LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js 14.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 14.x
-      - name: npm install, build
-        run: |
-          npm install
-          npm run build
-      - name: run Lighthouse CI
-        run: |
-          npm install -g @lhci/cli@0.8.x
-          lhci autorun
+      - uses: actions/checkout@v1
+      - run: yarn install
+      - name: Run Tests
+        run: yarn jest --coverage --json --outputFile=/home/runner/work/_actions/mattallty/jest-github-action/v1/dist/jest.results.json
+      - uses: mattallty/jest-github-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
