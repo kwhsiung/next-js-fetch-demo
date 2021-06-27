@@ -1,3 +1,6 @@
 {
+  "env": {
+    "jest": true
+  },
   "extends": ["standard", "next", "next/core-web-vitals", "prettier", "plugin:prettier/recommended"]
 }
