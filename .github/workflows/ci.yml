@@ -4,6 +4,10 @@ jobs:
   jest-annotations-coverage:
     runs-on: ubuntu-latest
     steps:
-      - uses: mattallty/jest-github-action@v1.0.3
+      - uses: actions/checkout@v1
+      - run: yarn install
+      - name: Run Tests
+        run: yarn jest --coverage --json --outputFile=/home/runner/work/_actions/mattallty/jest-github-action/v1/dist/jest.results.json
+      - uses: mattallty/jest-github-action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
