@@ -1,3 +1,3 @@
 export default function TestComponents({ testProps }) {
-  return <div>{testProps}</div>
+  return <div style={{ color: 'red' }}>{testProps}</div>
 }
