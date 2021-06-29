@@ -5,7 +5,7 @@ import { useSWRInfinite } from 'swr'
 export async function getStaticProps() {
   // `getStaticProps` is invoked on the server-side,
   // so this `fetcher` function will be executed on the server-side.
-  const posts = await fetcher('http://localhost:3000/api/posts', 1, 20)
+  const posts = await fetcher('/posts', 1, 20)
   return { props: { posts } }
 }
 
@@ -14,7 +14,7 @@ export async function getStaticProps() {
 // If `null` is returned, the request of that page won't start.
 const getKey = (pageIndex, previousPageData) => {
   if (previousPageData && !previousPageData.length) return null // reached the end
-  return ['/api/posts', pageIndex + 1, 10]
+  return ['/posts', pageIndex + 1, 10]
 }
 
 export default function Home({ posts }) {
