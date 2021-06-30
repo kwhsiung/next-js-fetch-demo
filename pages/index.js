@@ -74,7 +74,7 @@ export default function Home({ posts }) {
         dataLength={data.flat().length}
         next={() => setSize(size + 1)}
         hasMore={data[data.length - 1].length > 0}
-        loader={<h4>Loading...</h4>}
+        loader={<p>Loading...</p>}
       >
         <ListWrapper>
           <List>
