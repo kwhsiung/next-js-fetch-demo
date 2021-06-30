@@ -50,6 +50,7 @@ export default function PagePost({ post }) {
     <PageWrapper>
       <Head>
         <title>Post {post.id}</title>
+        <meta name="description" content="post" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

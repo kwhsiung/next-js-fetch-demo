@@ -67,6 +67,7 @@ export default function Home({ posts }) {
     <PageWrapper>
       <Head>
         <title>Posts</title>
+        <meta name="description" content="posts" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
