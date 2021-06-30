@@ -2,7 +2,6 @@ import { fetcher } from '../../util'
 import Post from '../../components/Post'
 import Link from 'next/link'
 import styled from 'styled-components'
-import { useRouter } from 'next/router'
 import Head from 'next/head'
 
 export async function getStaticPaths() {
@@ -39,13 +38,6 @@ const BackToHomeLink = styled.a`
 `
 
 export default function PagePost({ post }) {
-  const router = useRouter()
-  // If the page is not yet generated, this will be displayed
-  // initially until getStaticProps() finishes running
-  if (router.isFallback) {
-    return <div>Loading...</div>
-  }
-
   return (
     <PageWrapper>
       <Head>
