@@ -29,7 +29,7 @@ const Title = styled.h1`
 const Paragraph = styled.p`
   font-size: 14px;
   line-height: 20px;
-  color: #9b9b9b;
+  color: gray;
   word-wrap: break-word;
   -webkit-line-clamp: 3;
   display: -webkit-box;
