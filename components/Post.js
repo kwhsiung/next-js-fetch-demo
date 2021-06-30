@@ -21,7 +21,7 @@ const Wrapper = styled.div`
 const Title = styled.h1`
   font-size: 16px;
   line-height: 150%;
-  color: #4a4a4a;
+  color: black;
   @media (min-width: ${breakpoints.md}px) {
     font-size: 20px;
   }
@@ -29,7 +29,7 @@ const Title = styled.h1`
 const Paragraph = styled.p`
   font-size: 14px;
   line-height: 20px;
-  color: gray;
+  color: #4a4a4a;
   word-wrap: break-word;
   -webkit-line-clamp: 3;
   display: -webkit-box;
