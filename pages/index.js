@@ -45,6 +45,7 @@ const List = styled.ol`
 const ListItem = styled.li`
   margin: 40px 0 0 0;
   @media (min-width: ${breakpoints.xl}px) {
+    width: 320px;
     margin: 30px 0 0 30px;
   }
 `
