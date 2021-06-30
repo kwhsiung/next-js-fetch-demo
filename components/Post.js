@@ -10,7 +10,6 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   @media (min-width: ${breakpoints.xl}px) {
-    width: 320px;
     padding: 16px 24px 24px;
   }
   @media (min-width: ${breakpoints.xl}px) {
