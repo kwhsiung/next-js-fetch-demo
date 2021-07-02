@@ -47,7 +47,7 @@ export default function PagePost({ post }) {
       </Head>
 
       <Post id={post.id} title={post.title} body={post.body} />
-      <Link href="/" passHref>
+      <Link href="/" passHref prefetch={false}>
         <BackToHomeLink>back to home</BackToHomeLink>
       </Link>
     </PageWrapper>
