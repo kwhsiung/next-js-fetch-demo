@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import breakpoints from '../util/breakpoints'
+import PropTypes from 'prop-types'
 
 const Wrapper = styled.div`
   background: #ffffff;
@@ -50,4 +51,22 @@ export default function Post({ id, title, body }) {
       <Paragraph>{body}</Paragraph>
     </Wrapper>
   )
+}
+
+// As you can see, comments below are not very useful, just for playing description feature of Storybook
+Post.propTypes = {
+  /**
+    The id of the post
+  */
+  id: PropTypes.number.isRequired,
+
+  /**
+   The title of the post
+   */
+  title: PropTypes.string.isRequired,
+
+  /**
+   The body of the post
+   */
+  body: PropTypes.string.isRequired,
 }
